@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
@@ -8,9 +8,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, MessageSquare, ExternalLink } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,8 +30,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Send email using EmailJS
+    emailjs.sendForm(
+      'service_kqtecnn',
+      'template_tv45p3s',
+      formRef.current as HTMLFormElement,
+      'H357zAP8V__yP5H8e'
+    )
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon.",
@@ -41,7 +50,16 @@ const Contact = () => {
         message: "",
       });
       setIsSubmitting(false);
-    }, 1500);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error.text);
+      toast({
+        title: "Error",
+        description: "There was an issue sending your message. Please try again.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -57,7 +75,7 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="p-6 bg-card border border-muted animate-fade-in">
               <h3 className="text-xl font-semibold mb-4">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
                     Name

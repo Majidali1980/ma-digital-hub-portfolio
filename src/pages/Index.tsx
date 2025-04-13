@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
 import { ArrowRight, Code, Layers, Paintbrush, ShoppingBag } from "lucide-react";
+import AnimatedLogo from "@/components/ui/animated-logo";
 
 const Index = () => {
   return (
@@ -13,6 +14,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-ma-dark via-ma-dark-gray to-ma-dark opacity-80"></div>
         <div className="container-custom min-h-[85vh] flex flex-col justify-center relative z-10">
           <div className="max-w-3xl">
+            <div className="flex items-center">
+              <AnimatedLogo />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Transforming Ideas into 
               <span className="gradient-text block mt-2">Digital Reality</span>
@@ -217,7 +221,7 @@ const Index = () => {
             <div className="bg-card rounded-lg border border-muted p-6 hover:border-ma-teal transition-all animate-fade-in">
               <h3 className="text-xl font-semibold mb-2">Basic</h3>
               <div className="mb-4">
-                <span className="text-3xl font-bold">$499</span>
+                <span className="text-3xl font-bold">$100</span>
                 <span className="text-muted-foreground ml-1">/ project</span>
               </div>
               <p className="text-muted-foreground mb-6">
@@ -263,7 +267,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Standard</h3>
               <div className="mb-4">
-                <span className="text-3xl font-bold">$999</span>
+                <span className="text-3xl font-bold">$200</span>
                 <span className="text-muted-foreground ml-1">/ project</span>
               </div>
               <p className="text-muted-foreground mb-6">
@@ -312,7 +316,7 @@ const Index = () => {
             <div className="bg-card rounded-lg border border-muted p-6 hover:border-ma-teal transition-all animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <h3 className="text-xl font-semibold mb-2">Premium</h3>
               <div className="mb-4">
-                <span className="text-3xl font-bold">$1999</span>
+                <span className="text-3xl font-bold">$300</span>
                 <span className="text-muted-foreground ml-1">/ project</span>
               </div>
               <p className="text-muted-foreground mb-6">
