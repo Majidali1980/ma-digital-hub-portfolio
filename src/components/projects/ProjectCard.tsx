@@ -14,12 +14,11 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, imageUrl, liveUrl, category, index }: ProjectCardProps) => {
   return (
     <div 
-      className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal"
+      className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in"
       style={{
         animationDelay: `${index * 0.1}s`,
         opacity: 0
       }}
-      className="animate-fade-in"
     >
       <div className="aspect-[16/9] overflow-hidden">
         <img 
