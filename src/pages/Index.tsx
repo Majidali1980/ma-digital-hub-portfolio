@@ -109,42 +109,12 @@ const Index = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Project 1 */}
+            {/* Project 1 - Animated Full-Stack Developer Portfolio */}
             <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://github.com/Majidali1980/lmages/blob/main/MA%20Foods.png?raw=true" 
-                  alt="M.A. Foods" 
-                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <div className="mb-2">
-                  <span className="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
-                    E-commerce
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold tracking-tight mb-2">
-                  M.A. Foods
-                </h3>
-                <a 
-                  href="https://kabab-kingdom.vercel.app/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
-                >
-                  View Live Demo
-                  <ArrowRight size={14} className="ml-1" />
-                </a>
-              </div>
-            </div>
-
-            {/* Project 2 - Digital Photography */}
-            <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  src="https://github.com/Majidali1980/lmages/blob/main/Digital-Photography.png?raw=true" 
-                  alt="Digital Photography Portfolio" 
+                  src="https://github.com/Majidali1980/lmages/blob/main/001%20(2).png?raw=true" 
+                  alt="Animated Full-Stack Developer Portfolio" 
                   className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
@@ -155,10 +125,10 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold tracking-tight mb-2">
-                  Digital Photography
+                  Animated Full-Stack Developer Portfolio
                 </h3>
                 <a 
-                  href="https://photographer-portfolio-silk.vercel.app/" 
+                  href="https://cyber-portfolio-eta.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
@@ -169,26 +139,56 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Project 3 - Digital Portfolio */}
-            <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            {/* Project 2 - Web Developer & UI/UX Designer Portfolio */}
+            <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://github.com/Majidali1980/lmages/blob/main/Digital-Portfolio.png?raw=true" 
-                  alt="Digital Portfolio" 
+                  src="https://github.com/Majidali1980/lmages/blob/main/001%20(8).png?raw=true" 
+                  alt="Web Developer & UI/UX Designer Portfolio" 
                   className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
                 <div className="mb-2">
                   <span className="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
-                    Mobile Developer
+                    Portfolio
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold tracking-tight mb-2">
-                  Digital Portfolio
+                  Web Developer & UI/UX Designer Portfolio
                 </h3>
                 <a 
-                  href="https://mobile-developer.vercel.app/" 
+                  href="https://stellar-portfolio-glow.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
+                >
+                  View Live Demo
+                  <ArrowRight size={14} className="ml-1" />
+                </a>
+              </div>
+            </div>
+
+            {/* Project 3 - Full Animated Web Developer & Designer Portfolio */}
+            <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="aspect-[16/9] overflow-hidden">
+                <img 
+                  src="https://github.com/Majidali1980/lmages/blob/main/001%20(14).png?raw=true" 
+                  alt="Full Animated Web Developer & Designer Portfolio" 
+                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <div className="mb-2">
+                  <span className="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
+                    Portfolio
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold tracking-tight mb-2">
+                  Full Animated Web Developer & Designer Portfolio
+                </h3>
+                <a 
+                  href="https://webdeveloper-designer-portfolio.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
