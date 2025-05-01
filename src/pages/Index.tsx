@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
 import { ArrowRight, Code, Layers, Paintbrush, ShoppingBag } from "lucide-react";
 import AnimatedLogo from "@/components/ui/animated-logo";
+import AnimatedText from "@/components/ui/animated-text";
 
 const Index = () => {
   return (
@@ -18,20 +19,22 @@ const Index = () => {
               <AnimatedLogo />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Transforming Ideas into 
-              <span className="gradient-text block mt-2">Digital Reality</span>
+              <AnimatedText text="Transforming Ideas into" />
+              <span className="gradient-text block mt-2">
+                <AnimatedText text="Digital Reality" delay={0.08} />
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-lg">
+            <p className="text-xl text-muted-foreground mb-8 max-w-lg animate-fade-in" style={{ animationDelay: "0.5s", opacity: 0 }}>
               A creative digital hub specializing in web development, design, and digital solutions that drive results.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gradient-to-r from-ma-teal to-ma-dark-teal hover:opacity-90">
+              <Button asChild size="lg" className="bg-gradient-to-r from-ma-teal to-ma-dark-teal hover:opacity-90 animate-fade-in" style={{ animationDelay: "0.7s", opacity: 0 }}>
                 <Link to="/projects">
                   View Projects
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="animate-fade-in" style={{ animationDelay: "0.9s", opacity: 0 }}>
                 <Link to="/contact">
                   Get in Touch
                 </Link>
@@ -136,26 +139,26 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Project 2 */}
+            {/* Project 2 - Digital Photography */}
             <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://github.com/Majidali1980/lmages/blob/main/portfoliosoftwaredevveloper.png?raw=true" 
-                  alt="Software Developer Portfolio" 
+                  src="https://github.com/Majidali1980/lmages/blob/main/Digital-Photography.png?raw=true" 
+                  alt="Digital Photography Portfolio" 
                   className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
                 <div className="mb-2">
                   <span className="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
-                    Web Development
+                    Portfolio
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold tracking-tight mb-2">
-                  Software Developer Portfolio
+                  Digital Photography
                 </h3>
                 <a 
-                  href="https://radiant-online-self.vercel.app/" 
+                  href="https://photographer-portfolio-silk.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
@@ -166,26 +169,26 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Project 3 */}
+            {/* Project 3 - Digital Portfolio */}
             <div className="group relative overflow-hidden rounded-lg border border-muted bg-card transition-all hover:border-ma-teal animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://github.com/Majidali1980/lmages/blob/main/FitTrack.png?raw=true" 
-                  alt="FitTrack" 
+                  src="https://github.com/Majidali1980/lmages/blob/main/Digital-Portfolio.png?raw=true" 
+                  alt="Digital Portfolio" 
                   className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
                 <div className="mb-2">
                   <span className="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
-                    Web Application
+                    Mobile Developer
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold tracking-tight mb-2">
-                  FitTrack
+                  Digital Portfolio
                 </h3>
                 <a 
-                  href="https://fitnesstracker-mocha.vercel.app/" 
+                  href="https://mobile-developer.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-ma-teal hover:text-ma-dark-teal text-sm flex items-center"
@@ -220,10 +223,6 @@ const Index = () => {
             {/* Basic Plan */}
             <div className="bg-card rounded-lg border border-muted p-6 hover:border-ma-teal transition-all animate-fade-in">
               <h3 className="text-xl font-semibold mb-2">Basic</h3>
-              <div className="mb-4">
-                <span className="text-3xl font-bold">$100</span>
-                <span className="text-muted-foreground ml-1">/ project</span>
-              </div>
               <p className="text-muted-foreground mb-6">
                 Perfect for small business websites and portfolios
               </p>
@@ -266,10 +265,6 @@ const Index = () => {
                 Popular
               </div>
               <h3 className="text-xl font-semibold mb-2">Standard</h3>
-              <div className="mb-4">
-                <span className="text-3xl font-bold">$200</span>
-                <span className="text-muted-foreground ml-1">/ project</span>
-              </div>
               <p className="text-muted-foreground mb-6">
                 Ideal for businesses requiring more features
               </p>
@@ -315,10 +310,6 @@ const Index = () => {
             {/* Premium Plan */}
             <div className="bg-card rounded-lg border border-muted p-6 hover:border-ma-teal transition-all animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <h3 className="text-xl font-semibold mb-2">Premium</h3>
-              <div className="mb-4">
-                <span className="text-3xl font-bold">$300</span>
-                <span className="text-muted-foreground ml-1">/ project</span>
-              </div>
               <p className="text-muted-foreground mb-6">
                 Complete solution for advanced web applications
               </p>
@@ -387,6 +378,29 @@ const Index = () => {
                   Visit My Fiverr
                 </a>
               </Button>
+            </div>
+            <div className="mt-8 flex justify-center space-x-4">
+              <a 
+                href="https://www.pinterest.com/alimajid03021980/"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-ma-teal transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-pinterest">
+                  <path d="M12 2a10 10 0 0 0-3.16 19.5c-.07-.6-.12-1.52 0-2.18l.86-3.7s-.2-.48-.2-1.2c0-1.12.64-1.96 1.44-1.96.68 0 1.01.5 1.01 1.12 0 .68-.44 1.7-.66 2.64-.18.78.4 1.42 1.18 1.42 1.4 0 2.48-1.48 2.48-3.62 0-1.88-1.36-3.2-3.3-3.2a3.38 3.38 0 0 0-3.54 3.44c0 .68.26 1.42.58 1.82a.33.33 0 0 1 .08.3l-.22.86c-.08.26-.24.36-.5.22-1-.47-1.6-1.9-1.6-3.08 0-2.5 1.8-4.78 5.22-4.78 2.76 0 4.88 1.94 4.88 4.56 0 2.72-1.72 4.9-4.1 4.9-.8 0-1.54-.42-1.8-.9l-.5 1.9c-.18.68-.66 1.52-.98 2.04.74.22 1.52.34 2.34.34A6 6 0 0 0 12 2Z"></path>
+                </svg>
+              </a>
+              <a 
+                href="https://youtube.com/channel/UChQTYgIbl2C2ZIsRoKkXFUQ"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-ma-teal transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube">
+                  <path d="M12 19c-2.3 0-6.4-.2-8.1-.6-.7-.2-1.2-.7-1.4-1.4-.3-1.1-.5-3.4-.5-5s.2-3.9.5-5c.2-.7.7-1.2 1.4-1.4C5.6 5.2 9.7 5 12 5s6.4.2 8.1.6c.7.2 1.2.7 1.4 1.4.3 1.1.5 3.4.5 5s-.2 3.9-.5 5c-.2.7-.7 1.2-1.4 1.4-1.7.4-5.8.6-8.1.6 0 0 0 0 0 0z"></path>
+                  <polygon points="10 15 15 12 10 9"></polygon>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
