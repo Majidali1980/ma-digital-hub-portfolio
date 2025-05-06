@@ -5,11 +5,12 @@ interface AnimatedTextProps {
   text: string;
   className?: string;
   delay?: number;
+  gradient?: boolean;
 }
 
-const AnimatedText = ({ text, className = "", delay = 0.05 }: AnimatedTextProps) => {
+const AnimatedText = ({ text, className = "", delay = 0.05, gradient = false }: AnimatedTextProps) => {
   return (
-    <span className={className}>
+    <span className={`${className} ${gradient ? 'bg-gradient-to-r from-ma-teal to-ma-dark-teal text-transparent bg-clip-text' : ''}`}>
       {text.split('').map((char, index) => (
         <span
           key={`${char}-${index}`}

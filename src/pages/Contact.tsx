@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, MessageSquare, ExternalLink } from "lucide-react";
+import { Mail, MessageSquare, ExternalLink, Facebook, Instagram, Youtube, Pinterest } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import emailjs from '@emailjs/browser';
 
@@ -150,13 +150,62 @@ const Contact = () => {
                     <div>
                       <h4 className="text-base font-medium">Email</h4>
                       <a 
-                        href="mailto:alimajid003021980@gmail.com"
+                        href="mailto:alimajid03021980@gmail.com"
                         className="text-ma-teal hover:underline"
                       >
-                        alimajid003021980@gmail.com
+                        alimajid03021980@gmail.com
                       </a>
                     </div>
                   </div>
+                  
+                  <div className="flex items-start">
+                    <Facebook className="w-5 h-5 text-ma-teal mt-1 mr-3" />
+                    <div>
+                      <h4 className="text-base font-medium">Facebook</h4>
+                      <a 
+                        href="https://www.facebook.com/share/16TyxwjKRy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ma-teal hover:underline flex items-center"
+                      >
+                        MA Digital Hub
+                        <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Pinterest className="w-5 h-5 text-ma-teal mt-1 mr-3" />
+                    <div>
+                      <h4 className="text-base font-medium">Pinterest</h4>
+                      <a 
+                        href="https://www.pinterest.com/alimajid03021980/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ma-teal hover:underline flex items-center"
+                      >
+                        MA Digital Hub
+                        <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Youtube className="w-5 h-5 text-ma-teal mt-1 mr-3" />
+                    <div>
+                      <h4 className="text-base font-medium">YouTube</h4>
+                      <a 
+                        href="https://youtube.com/channel/UChQTYgIbl2C2ZIsRoKkXFUQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ma-teal hover:underline flex items-center"
+                      >
+                        MA Digital Hub
+                        <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                  
                   <div className="flex items-start">
                     <MessageSquare className="w-5 h-5 text-ma-teal mt-1 mr-3" />
                     <div>
@@ -168,6 +217,22 @@ const Contact = () => {
                         className="text-ma-teal hover:underline flex items-center"
                       >
                         Visit my Fiverr profile
+                        <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <ExternalLink className="w-5 h-5 text-ma-teal mt-1 mr-3" />
+                    <div>
+                      <h4 className="text-base font-medium">Website</h4>
+                      <a 
+                        href="https://ma-digital-hub.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ma-teal hover:underline flex items-center"
+                      >
+                        MA Digital Hub
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     </div>
@@ -231,7 +296,8 @@ const Contact = () => {
               <h3 className="text-lg font-semibold mb-2">What services do you offer?</h3>
               <p className="text-muted-foreground">
                 I offer a range of digital solutions including web development, UI/UX design, 
-                e-commerce development, portfolio websites, YouTube channel websites, and custom web applications.
+                e-commerce development, portfolio websites, YouTube channel websites, custom web applications,
+                and graphic design services.
               </p>
             </Card>
 

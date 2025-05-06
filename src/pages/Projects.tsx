@@ -182,6 +182,36 @@ const projects = [
     imageUrl: "https://github.com/Majidali1980/lmages/blob/main/Sleek%20Bill%20Craft.png?raw=true",
     liveUrl: "https://invoicegenerator-mu.vercel.app/",
     category: "application"
+  },
+  
+  // Graphic Designing Projects
+  {
+    id: 25,
+    title: "Hotel Website Thumbnail",
+    imageUrl: "https://i.postimg.cc/13dPmVTv/Yelllow-and-Blue-Modern-Geometric-How-To-Design-Youtube-Thumbnail.png",
+    liveUrl: "#",
+    category: "graphic"
+  },
+  {
+    id: 26,
+    title: "Hotel Visiting Card",
+    imageUrl: "https://i.postimg.cc/WbbP07c9/spoon.png",
+    liveUrl: "#",
+    category: "graphic"
+  },
+  {
+    id: 27,
+    title: "Digital Photography",
+    imageUrl: "https://i.postimg.cc/SK8v8nTQ/1-8.png",
+    liveUrl: "https://photographer-portfolio-silk.vercel.app/",
+    category: "graphic"
+  },
+  {
+    id: 28,
+    title: "Travel Youtube Thumbnail",
+    imageUrl: "https://i.postimg.cc/FHw67yxn/Green-Simple-Polaroid-Photo-Frame-Travel-Youtube-Thumbnail.png",
+    liveUrl: "#",
+    category: "graphic"
   }
 ];
 
@@ -202,13 +232,14 @@ const Projects = () => {
           />
           
           <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8 overflow-x-auto">
               <TabsList className="bg-muted">
                 <TabsTrigger value="all">All Projects</TabsTrigger>
                 <TabsTrigger value="portfolio">Portfolios</TabsTrigger>
                 <TabsTrigger value="ecommerce">E-commerce</TabsTrigger>
                 <TabsTrigger value="youtube">YouTube</TabsTrigger>
                 <TabsTrigger value="application">Applications</TabsTrigger>
+                <TabsTrigger value="graphic">Graphic Design</TabsTrigger>
               </TabsList>
             </div>
             
@@ -224,6 +255,7 @@ const Projects = () => {
                       project.category === "portfolio" ? "Portfolio" :
                       project.category === "ecommerce" ? "E-commerce" :
                       project.category === "youtube" ? "YouTube" :
+                      project.category === "graphic" ? "Graphic Design" :
                       "Application"
                     }
                     index={index}
@@ -286,6 +318,21 @@ const Projects = () => {
                     imageUrl={project.imageUrl}
                     liveUrl={project.liveUrl}
                     category="Application"
+                    index={index}
+                  />
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="graphic" className="mt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    imageUrl={project.imageUrl}
+                    liveUrl={project.liveUrl}
+                    category="Graphic Design"
                     index={index}
                   />
                 ))}
