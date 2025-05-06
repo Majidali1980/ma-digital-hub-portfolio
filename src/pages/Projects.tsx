@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/projects/ProjectCard";
 
@@ -189,7 +188,7 @@ const projects = [
     id: 25,
     title: "Hotel Website Thumbnail",
     imageUrl: "https://i.postimg.cc/13dPmVTv/Yelllow-and-Blue-Modern-Geometric-How-To-Design-Youtube-Thumbnail.png",
-    liveUrl: "#",
+    liveUrl: "https://card-to-canvas-creative.vercel.app/",
     category: "graphic"
   },
   {
@@ -210,8 +209,108 @@ const projects = [
     id: 28,
     title: "Travel Youtube Thumbnail",
     imageUrl: "https://i.postimg.cc/FHw67yxn/Green-Simple-Polaroid-Photo-Frame-Travel-Youtube-Thumbnail.png",
-    liveUrl: "#",
+    liveUrl: "https://truckfood.vercel.app/",
     category: "graphic"
+  },
+  
+  // Visiting Cards Projects
+  {
+    id: 29,
+    title: "Visiting Card Design 1",
+    imageUrl: "https://i.postimg.cc/q7k1t13w/1.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 30,
+    title: "Visiting Card Design 2",
+    imageUrl: "https://i.postimg.cc/Vv37d1q0/1-10.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 31,
+    title: "Visiting Card Design 3",
+    imageUrl: "https://i.postimg.cc/j52vcCvJ/1-11.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 32,
+    title: "Visiting Card Design 4",
+    imageUrl: "https://i.postimg.cc/W1cWVNpQ/1-12.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 33,
+    title: "Visiting Card Design 5",
+    imageUrl: "https://i.postimg.cc/zXgt4bNC/1-13.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 34,
+    title: "Visiting Card Design 6",
+    imageUrl: "https://i.postimg.cc/j51cFKk3/1-14.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 35,
+    title: "Visiting Card Design 7",
+    imageUrl: "https://i.postimg.cc/J4DvmYNB/1-2.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 36,
+    title: "Visiting Card Design 8",
+    imageUrl: "https://i.postimg.cc/zXsMfw72/1-3.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 37,
+    title: "Visiting Card Design 9",
+    imageUrl: "https://i.postimg.cc/zf5cCJ9n/1-4.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 38,
+    title: "Visiting Card Design 10",
+    imageUrl: "https://i.postimg.cc/q7LZQPTW/1-5.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 39,
+    title: "Visiting Card Design 11",
+    imageUrl: "https://i.postimg.cc/0y74K6Hk/1-6.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 40,
+    title: "Visiting Card Design 12",
+    imageUrl: "https://i.postimg.cc/XJ1169X8/1-7.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 41,
+    title: "Visiting Card Design 13",
+    imageUrl: "https://i.postimg.cc/NMjCndGF/1-8.png",
+    liveUrl: "#",
+    category: "cards"
+  },
+  {
+    id: 42,
+    title: "Visiting Card Design 14",
+    imageUrl: "https://i.postimg.cc/GpqqvvPC/1-9.png",
+    liveUrl: "#",
+    category: "cards"
   }
 ];
 
@@ -240,6 +339,7 @@ const Projects = () => {
                 <TabsTrigger value="youtube">YouTube</TabsTrigger>
                 <TabsTrigger value="application">Applications</TabsTrigger>
                 <TabsTrigger value="graphic">Graphic Design</TabsTrigger>
+                <TabsTrigger value="cards">Visiting Cards</TabsTrigger>
               </TabsList>
             </div>
             
@@ -256,6 +356,7 @@ const Projects = () => {
                       project.category === "ecommerce" ? "E-commerce" :
                       project.category === "youtube" ? "YouTube" :
                       project.category === "graphic" ? "Graphic Design" :
+                      project.category === "cards" ? "Visiting Cards" :
                       "Application"
                     }
                     index={index}
@@ -333,6 +434,21 @@ const Projects = () => {
                     imageUrl={project.imageUrl}
                     liveUrl={project.liveUrl}
                     category="Graphic Design"
+                    index={index}
+                  />
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="cards" className="mt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    imageUrl={project.imageUrl}
+                    liveUrl={project.liveUrl}
+                    category="Visiting Cards"
                     index={index}
                   />
                 ))}
