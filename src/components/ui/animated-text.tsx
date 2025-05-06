@@ -6,9 +6,29 @@ interface AnimatedTextProps {
   className?: string;
   delay?: number;
   gradient?: boolean;
+  staggered?: boolean;
+  duration?: string;
 }
 
-const AnimatedText = ({ text, className = "", delay = 0.05, gradient = false }: AnimatedTextProps) => {
+const AnimatedText = ({ 
+  text, 
+  className = "", 
+  delay = 0.05, 
+  gradient = false,
+  staggered = true,
+  duration = "1s"
+}: AnimatedTextProps) => {
+  if (!staggered) {
+    return (
+      <span 
+        className={`${className} ${gradient ? 'bg-gradient-to-r from-ma-teal to-ma-dark-teal text-transparent bg-clip-text' : ''} animate-fade-in`}
+        style={{ animationDuration: duration }}
+      >
+        {text}
+      </span>
+    );
+  }
+  
   return (
     <span className={`${className} ${gradient ? 'bg-gradient-to-r from-ma-teal to-ma-dark-teal text-transparent bg-clip-text' : ''}`}>
       {text.split('').map((char, index) => (
@@ -17,6 +37,7 @@ const AnimatedText = ({ text, className = "", delay = 0.05, gradient = false }: 
           className="inline-block animate-fade-in"
           style={{ 
             animationDelay: `${delay * index}s`,
+            animationDuration: duration,
             opacity: 0,
           }}
         >
